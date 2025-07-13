@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"> 
+  <title>Apresentação do Software</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --azul-escuro: #003366;
+      --azul-medio : #0077cc;
+      --fundo-claro: #f4f4f4;
+      --sombra     : 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--fundo-claro);
+      color: #333;
+    }
+
+    /* ===== CABEÇALHO COM IMAGEM DE FUNDO ===== */
+    header {
+      position: relative;
+      min-height: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      padding: 40px 20px;
+      background:
+        linear-gradient(rgba(0, 0, 0, .55), rgba(0, 0, 0, .55)),
+        url('imagens/banner-header.png') center/cover no-repeat;
+      box-shadow: var(--sombra);
+    }
+
+    header h1 {
+      font-size: 42px;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 18px;
+      margin-top: 10px;
+      max-width: 700px;
+    }
+
+    /* ===== SEÇÕES ===== */
+    section {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 25px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: var(--sombra);
+    }
+
+    h2 {
+      color: var(--azul-escuro);
+      border-left: 6px solid var(--azul-medio);
+      padding-left: 12px;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    /* ===== GALERIA DE CARDS ===== */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: var(--sombra);
+      transition: transform .3s;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .card-content {
+      padding: 15px;
+    }
+
+    .card-content h3 {
+      margin-top: 0;
+      color: var(--azul-escuro);
+      font-size: 18px;
+    }
+
+    .card-content p {
+      font-size: 14px;
+      color: #444;
+    }
+
+    /* ===== RODAPÉ ===== */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #ddd;
+      font-size: 14px;
+      margin-top: 60px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Controle++</h1>
+    <p>Aplicativo Java Desktop para gerenciamento eficiente de processos</p>
+  </header>
+
+  <section>
+    <h2>Resumo</h2>
+    <p>Este software foi desenvolvido em Java para oferecer uma solução prática e eficiente para controle de vendas, estoque, finanças e mais. Com uma interface gráfica moderna, ele possibilita o gerenciamento completo de dados.</p>
+  </section>
+
+  <section>
+    <h2>Funcionalidades</h2>
+    <ul>
+      <li>Cadastro e edição de produtos, clientes e usuários</li>
+      <li>Lançamento de vendas e controle de estoque automático</li>
+      <li>Geração de relatórios e gráficos</li>
+      <li>Interface visual com Java Swing</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Galeria de Telas do Sistema</h2>
+    <div class="card-grid">
+      <div class="card">
+        <img src="imagens/tela-login.png" alt="Tela de Login">
+        <div class="card-content">
+          <h3>Tela de Login</h3>
+          <p>Área inicial de acesso seguro ao sistema com autenticação de usuários.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="imagens/tela-venda.png" alt="Tela de Venda">
+        <div class="card-content">
+          <h3>Tela de Venda</h3>
+          <p>Ambiente para registrar e acompanhar vendas de forma rápida e eficiente.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="imagens/cadastro-produto.png" alt="Cadastro de Produto">
+        <div class="card-content">
+          <h3>Cadastro de Produto</h3>
+          <p>Formulário completo para incluir e editar produtos com validação de campos.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="imagens/em-desenvolvimento.png" alt="Relatório de Vendas (em desenvolvimento)">
+        <div class="card-content">
+          <h3>Relatório de Vendas</h3>
+          <p>Geração de relatórios com filtros por data, cliente e produto (em desenvolvimento).</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="imagens/tela-pedido.png" alt="Tela de Pedido de Compra">
+        <div class="card-content">
+          <h3>Tela de Pedido de Compra</h3>
+          <p>Registro e controle de pedidos de compra realizados com fornecedores.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="imagens/em-desenvolvimento.png" alt="Tela de Configurações (em desenvolvimento)">
+        <div class="card-content">
+          <h3>Configurações</h3>
+          <p>Ajustes de preferências do sistema, como temas e permissões (em desenvolvimento).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Equipe Desenvolvedora</h2>
+    <ul>
+      <li>Samuel Dolberth – Programador Java e arquiteto do sistema</li>
+    </ul>
+  </section>
+
+  <footer>
+    © 2025 - Projeto Software de gestão de Venda e Estoque desenvolvido como parte de Projeto Interdisciplinar
+  </footer>
+
+</body>
+</html>
